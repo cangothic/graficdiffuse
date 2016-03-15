@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1458062546 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\herramientasgraficas.cpp
+	"herramientasgraficas.h"
+
+1458062716 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\herramientasgraficas.h
+	<SDL/SDL.H>
+	<string>
+
+1458062419 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\main.cpp
+	"herramientasgraficas.h"
+
