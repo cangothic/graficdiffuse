@@ -1,6 +1,7 @@
 #include "herramientasgraficas.h"
 SDL_Surface * screen;
 SDL_Surface * imagen;
+SDL_Event evento;
 int main(int argc, char * args[]){
    iniciar_sdl();
    crear_pantalla(600,800,screen);
@@ -10,11 +11,11 @@ int main(int argc, char * args[]){
    while(true){
      y=3*x;
      pintar_pantalla(x,y,screen,imagen);
-     SDL_Delay(20);
+     //SDL_Delay(20);
      x++;
-     if (x>500) {
+     /*if (x>500) {
        break;
-     }
+     }*/
    }
    SDL_FreeSurface(imagen);
    SDL_Quit();
