@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="herramientasgraficas.cpp" />
+		<Unit filename="herramientasgraficas.h" />
+		<Unit filename="img.bmp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

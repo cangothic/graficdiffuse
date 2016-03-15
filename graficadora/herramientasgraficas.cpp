@@ -30,7 +30,7 @@ void pintar_pantalla(int &_x,int &_y,SDL_Surface * &screen,SDL_Surface * &_image
     origen.h=(3);
     SDL_Rect destino;
     destino.x=(_x);
-    destino.y=(800-_y);
+    destino.y=(600-_y);
     SDL_BlitSurface(_imagen,&origen,screen,&destino);
     SDL_Flip(screen);
 }
