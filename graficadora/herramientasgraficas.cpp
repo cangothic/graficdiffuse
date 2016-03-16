@@ -7,7 +7,7 @@ void iniciar_sdl(){
 }
 
 void crear_pantalla(int x, int y,SDL_Surface * &screen){
-    screen = SDL_SetVideoMode(y,x,32,SDL_SWSURFACE);
+    screen = SDL_SetVideoMode(x,y,32,SDL_SWSURFACE);
     if(screen == NULL){
     fprintf(stderr,"Error crear la pantalla %s",SDL_GetError());
     exit(1);
@@ -26,11 +26,11 @@ void pintar_pantalla(int &_x,int &_y,SDL_Surface * &screen,SDL_Surface * &_image
     SDL_Rect origen;
     origen.x=(0);
     origen.y=(0);
-    origen.w=(3);
-    origen.h=(3);
+    origen.w=(1);
+    origen.h=(1);
     SDL_Rect destino;
     destino.x=(_x);
-    destino.y=(600-_y);
+    destino.y=(screen->h-_y);
     SDL_BlitSurface(_imagen,&origen,screen,&destino);
     SDL_Flip(screen);
 }

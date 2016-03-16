@@ -22,3 +22,14 @@
 1458077023 source:c:\users\familia\documents\github\graficdiffuse\graficadora\herramientasgraficas.cpp
 	"herramientasgraficas.h"
 
+1458084241 source:c:\users\rocka\documents\graficdiffuse\graficadora\herramientasgraficas.cpp
+	"herramientasgraficas.h"
+
+1458087071 c:\users\rocka\documents\graficdiffuse\graficadora\herramientasgraficas.h
+	<SDL/SDL.H>
+	<string>
+
+1458089901 source:c:\users\rocka\documents\graficdiffuse\graficadora\main.cpp
+	<bits/stdc++.h>
+	"herramientasgraficas.h"
+
