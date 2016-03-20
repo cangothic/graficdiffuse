@@ -7,10 +7,13 @@ int tamVertical = 600;
 SDL_Surface * screen;
 SDL_Surface * imagen;
 SDL_Event evento;
-const int Trapezoidal = 1;
-const int Gaussiana = 2;
-const int Bell = 3;
-const int Sigmoide = 4;
+
+enum Funciones {    Trapezoidal,
+                    Gaussiana,
+                    blue,
+                    Bell,
+                    Sigmoide    };
+
 void pintarRayitas(int cantidad,int unidad,bool isVertical){
     for(int i=0;i<cantidad+5;i++){
         int a = i*unidad;
@@ -24,7 +27,7 @@ void pintarRayitas(int cantidad,int unidad,bool isVertical){
         }
     }
 }
-double funcion(int funcion,vector<double> parametros, double x){
+double devolverFuncion(int funcion,vector<double> parametros, double x){
     if(funcion==Trapezoidal){
         double a = parametros[0];
         double b = parametros[1];
@@ -47,23 +50,16 @@ double funcion(int funcion,vector<double> parametros, double x){
     }
     return 0;
 }
-void pintarFuncion(int limiteIzquierdo,int limiteDerecho,int &x,int y,int unidadX,int unidadY,vector<double> parametros){
-    while(true){
-     double xTemp = ((x+0.0)/unidadX)+limiteIzquierdo;
-     double yTemp= funcion(Trapezoidal,parametros,xTemp);
-     int yPast = y;
-     y = round(yTemp*unidadY);
-     if(yPast==0)yPast = y;
-     for(int i=min(yPast,y);i<=max(y,yPast);i++){
+void pintarFuncion(int limiteIzquierdo,int limiteDerecho,int &x,int &y,int unidadX,int unidadY,vector<double> parametros){
+    double xTemp = ((x+0.0)/unidadX)+limiteIzquierdo;
+    double yTemp= devolverFuncion(Trapezoidal,parametros,xTemp);
+    int yPast = y;
+    y = round(yTemp*unidadY);
+    if(yPast==0)yPast = y;
+    for(int i=min(yPast,y);i<=max(y,yPast);i++){
         pintar_pantalla(x,i,screen,imagen);
-     }
-     x++;
-     while ( SDL_PollEvent(&evento)){
-       if(evento.type==SDL_QUIT){
-        exit(0);
-       }
-     }
-   }
+    }
+    x++;
 }
 int main(int argc, char * args[]){
     vector<double> parametros;
@@ -76,13 +72,19 @@ int main(int argc, char * args[]){
     cargar_datos("img.bmp",imagen);
     int limiteIzquierdo = 0;
     int limiteDerecho = 15;
-    int x=0;
-    int y=0;
+    int x=0,y=0;
     int unidadX = tamHorizontal/(limiteDerecho-limiteIzquierdo);
     int unidadY = tamVertical-100;
     pintarRayitas(2,unidadY,true);
     pintarRayitas((limiteDerecho-limiteIzquierdo)+1,unidadX,false);
-    pintarFuncion(limiteIzquierdo,limiteDerecho,x,y,unidadX,unidadY,parametros);
+    while(true){
+        pintarFuncion(limiteIzquierdo,limiteDerecho,x,y,unidadX,unidadY,parametros);
+        while ( SDL_PollEvent(&evento)){
+            if(evento.type==SDL_QUIT){
+                exit(0);
+            }
+        }
+    }
     SDL_FreeSurface(imagen);
     SDL_Quit();
 return 0;
