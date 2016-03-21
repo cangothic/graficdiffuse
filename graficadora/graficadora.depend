@@ -29,14 +29,14 @@
 	<SDL/SDL.H>
 	<string>
 
-1458510210 source:c:\users\rocka\documents\graficdiffuse\graficadora\main.cpp
+1458533258 source:c:\users\rocka\documents\graficdiffuse\graficadora\main.cpp
 	<bits/stdc++.h>
 	"herramientasgraficas.h"
 
-1458515526 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\funcion.cpp
+1458595938 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\funcion.cpp
 	"Funcion.h"
 
-1458515987 c:\users\rocka\documents\graficdiffuse\graficadora\include\funcion.h
+1458597509 c:\users\rocka\documents\graficdiffuse\graficadora\include\funcion.h
 	<SDL/SDL.H>
 	"../herramientasgraficas.h"
 	<bits/stdc++.h>

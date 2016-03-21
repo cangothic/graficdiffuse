@@ -7,11 +7,11 @@
 class Funcion
 {
     public:
-        Funcion(int _limiteIzquierdo,int _limiteDerecho,int _x,int _y,int _unidadX,
-                int _unidadY,SDL_Surface * &_screen,SDL_Surface * &_imagen);
+        Funcion(int _limiteIzquierdo,int _limiteDerecho,int _unidadX,int _unidadY,SDL_Surface * &_screen,SDL_Surface * &_imagen,double(*_funcion)(double));
         //constructor inicializa las variables del objeto
-
-        void actualizarFuncion(double funcion(double));
+        void pintarPlanoCartesiano();
+        //pinta el plano cartesiano;
+        void actualizarFuncion(int x,int y);
         //actualiza la suoerficie
         void imprimir();
         //muestra la suoerficie
@@ -28,10 +28,9 @@ class Funcion
         //desde donde se va a pintar la funucion
         int limiteDerecho;
         //hasta donde se va a pintar la funcion
-        int x,y;
-        //cordenadas x & y sin convertir
         int unidadX,unidadY;
         //unidad que representa la forma en que se va pintar la funcion
+        double(*funcion)(double);
 
 };
 
