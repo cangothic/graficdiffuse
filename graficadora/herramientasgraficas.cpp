@@ -22,7 +22,7 @@ void cargar_datos(string direccionImagen,SDL_Surface * &_imagen){
     }
 }
 
-void pintar_pantalla(int &_x,int &_y,SDL_Surface * &screen,SDL_Surface * &_imagen){
+void pintar_pantalla(int _x,int &_y,SDL_Surface * &screen,SDL_Surface * &_imagen){
     SDL_Rect origen;
     origen.x=(0);
     origen.y=(0);
@@ -32,5 +32,4 @@ void pintar_pantalla(int &_x,int &_y,SDL_Surface * &screen,SDL_Surface * &_image
     destino.x=(_x);
     destino.y=(screen->h-_y);
     SDL_BlitSurface(_imagen,&origen,screen,&destino);
-    SDL_Flip(screen);
 }

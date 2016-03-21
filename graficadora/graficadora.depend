@@ -22,14 +22,22 @@
 1458077023 source:c:\users\familia\documents\github\graficdiffuse\graficadora\herramientasgraficas.cpp
 	"herramientasgraficas.h"
 
-1458454421 source:c:\users\rocka\documents\graficdiffuse\graficadora\herramientasgraficas.cpp
+1458519502 source:c:\users\rocka\documents\graficdiffuse\graficadora\herramientasgraficas.cpp
 	"herramientasgraficas.h"
 
-1458087071 c:\users\rocka\documents\graficdiffuse\graficadora\herramientasgraficas.h
+1458508854 c:\users\rocka\documents\graficdiffuse\graficadora\herramientasgraficas.h
 	<SDL/SDL.H>
 	<string>
 
-1458453384 source:c:\users\rocka\documents\graficdiffuse\graficadora\main.cpp
+1458510210 source:c:\users\rocka\documents\graficdiffuse\graficadora\main.cpp
 	<bits/stdc++.h>
 	"herramientasgraficas.h"
+
+1458515526 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\funcion.cpp
+	"Funcion.h"
+
+1458515987 c:\users\rocka\documents\graficdiffuse\graficadora\include\funcion.h
+	<SDL/SDL.H>
+	"../herramientasgraficas.h"
+	<bits/stdc++.h>
 

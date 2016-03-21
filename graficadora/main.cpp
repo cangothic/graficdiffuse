@@ -51,15 +51,17 @@ double devolverFuncion(int funcion,vector<double> parametros, double x){
     return 0;
 }
 void pintarFuncion(int limiteIzquierdo,int limiteDerecho,int &x,int &y,int unidadX,int unidadY,vector<double> parametros){
-    double xTemp = ((x+0.0)/unidadX)+limiteIzquierdo;
-    double yTemp= devolverFuncion(Trapezoidal,parametros,xTemp);
-    int yPast = y;
-    y = round(yTemp*unidadY);
-    if(yPast==0)yPast = y;
-    for(int i=min(yPast,y);i<=max(y,yPast);i++){
-        pintar_pantalla(x,i,screen,imagen);
-    }
-    x++;
+        while(x<=limiteDerecho*unidadX){
+            double xTemp = ((x+0.0)/unidadX)+limiteIzquierdo;
+            double yTemp= devolverFuncion(Trapezoidal,parametros,xTemp);
+            int yPast = y;
+            y = round(yTemp*unidadY);
+            if(yPast==0)yPast = y;
+            for(int i=min(yPast,y);i<=max(y,yPast);i++){
+                pintar_pantalla(x,i,screen,imagen);
+            }
+            x++;
+        }
 }
 int main(int argc, char * args[]){
     vector<double> parametros;
@@ -77,14 +79,16 @@ int main(int argc, char * args[]){
     int unidadY = tamVertical-100;
     pintarRayitas(2,unidadY,true);
     pintarRayitas((limiteDerecho-limiteIzquierdo)+1,unidadX,false);
+    pintarFuncion(limiteIzquierdo,limiteDerecho,x,y,unidadX,unidadY,parametros);
     while(true){
-        pintarFuncion(limiteIzquierdo,limiteDerecho,x,y,unidadX,unidadY,parametros);
+        SDL_Flip(screen);
         while ( SDL_PollEvent(&evento)){
             if(evento.type==SDL_QUIT){
                 exit(0);
             }
         }
     }
+
     SDL_FreeSurface(imagen);
     SDL_Quit();
 return 0;
