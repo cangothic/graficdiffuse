@@ -11,7 +11,7 @@ class Funcion
         //constructor inicializa las variables del objeto
         void pintarPlanoCartesiano();
         //pinta el plano cartesiano;
-        void actualizarFuncion(int x,int y);
+        void actualizarFuncion(int x);
         //actualiza la suoerficie
         void imprimir();
         //muestra la suoerficie
@@ -22,6 +22,7 @@ class Funcion
     protected:
 
     private:
+        bool complemento=false;
         SDL_Surface * screen;
         SDL_Surface * imagen;
         int limiteIzquierdo;

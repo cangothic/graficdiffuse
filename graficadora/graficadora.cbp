@@ -37,8 +37,12 @@
 		<Unit filename="herramientasgraficas.cpp" />
 		<Unit filename="herramientasgraficas.h" />
 		<Unit filename="img.bmp" />
+		<Unit filename="include/Director.h" />
+		<Unit filename="include/Escena.h" />
 		<Unit filename="include/Funcion.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Director.cpp" />
+		<Unit filename="src/Escena.cpp" />
 		<Unit filename="src/Funcion.cpp" />
 		<Extensions>
 			<code_completion />

@@ -33,11 +33,21 @@
 	<bits/stdc++.h>
 	"herramientasgraficas.h"
 
-1458595938 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\funcion.cpp
+1458669675 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\funcion.cpp
 	"Funcion.h"
 
-1458597509 c:\users\rocka\documents\graficdiffuse\graficadora\include\funcion.h
+1458658680 c:\users\rocka\documents\graficdiffuse\graficadora\include\funcion.h
 	<SDL/SDL.H>
 	"../herramientasgraficas.h"
 	<bits/stdc++.h>
+
+1458669828 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\director.cpp
+	"Director.h"
+
+1458669676 c:\users\rocka\documents\graficdiffuse\graficadora\include\director.h
+
+1458846503 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\escena.cpp
+	"Escena.h"
+
+1458846503 c:\users\rocka\documents\graficdiffuse\graficadora\include\escena.h
 
