@@ -11,7 +11,7 @@ class Funcion
         //constructor inicializa las variables del objeto
         void pintarPlanoCartesiano();
         //pinta el plano cartesiano;
-        void actualizarFuncion(int x);
+        void actualizarFuncion(int x=0);
         //actualiza la suoerficie
         void imprimir();
         //muestra la suoerficie

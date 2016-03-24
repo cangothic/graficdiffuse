@@ -15,7 +15,7 @@ Funcion::~Funcion(){
     SDL_FreeSurface(imagen);
     SDL_FreeSurface(screen);
 }
-void Funcion::actualizarFuncion(int x=0){
+void Funcion::actualizarFuncion(int x){
     int y=0;
     while(x<=limiteDerecho*unidadX){
         double xTemp = ((x+0.0)/unidadX)+limiteIzquierdo;
