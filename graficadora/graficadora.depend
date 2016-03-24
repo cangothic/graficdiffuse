@@ -11,10 +11,11 @@
 
 1458064156 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\director.cpp
 
-1458846459 source:c:\users\familia\documents\github\graficdiffuse\graficadora\main.cpp
+1458860545 source:c:\users\familia\documents\github\graficdiffuse\graficadora\main.cpp
 	<bits/stdc++.h>
 	"herramientasgraficas.h"
 	"Funcion.h"
+	"FuncionesDifusas.h"
 
 1458842657 c:\users\familia\documents\github\graficdiffuse\graficadora\herramientasgraficas.h
 	<SDL/SDL.H>
@@ -62,11 +63,18 @@
 
 1458842657 c:\users\familia\documents\github\graficdiffuse\graficadora\include\escena.h
 
-1458846494 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\funcion.cpp
+1458859934 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\funcion.cpp
 	"Funcion.h"
 
-1458846455 c:\users\familia\documents\github\graficdiffuse\graficadora\include\funcion.h
+1458859937 c:\users\familia\documents\github\graficdiffuse\graficadora\include\funcion.h
 	<SDL/SDL.H>
 	"../herramientasgraficas.h"
+	<bits/stdc++.h>
+
+1458860526 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\funcionesdifusas.cpp
+	"FuncionesDifusas.h"
+	<bits/stdc++.h>
+
+1458859464 c:\users\familia\documents\github\graficdiffuse\graficadora\include\funcionesdifusas.h
 	<bits/stdc++.h>
 

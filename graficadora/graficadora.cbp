@@ -40,10 +40,12 @@
 		<Unit filename="include/Director.h" />
 		<Unit filename="include/Escena.h" />
 		<Unit filename="include/Funcion.h" />
+		<Unit filename="include/FuncionesDifusas.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Director.cpp" />
 		<Unit filename="src/Escena.cpp" />
 		<Unit filename="src/Funcion.cpp" />
+		<Unit filename="src/FuncionesDifusas.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

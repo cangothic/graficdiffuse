@@ -1,7 +1,7 @@
 #include "Funcion.h"
 
 using namespace std;
-Funcion::Funcion(int _limiteIzquierdo, int _limiteDerecho, int _unidadX, int _unidadY,SDL_Surface*& _screen, SDL_Surface*& _imagen, double(* _funcion)(double)){
+Funcion::Funcion(int _limiteIzquierdo, int _limiteDerecho, int _unidadX, int _unidadY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion){
     limiteIzquierdo=_limiteIzquierdo;
     limiteDerecho=_limiteDerecho;
     unidadX=_unidadX;
