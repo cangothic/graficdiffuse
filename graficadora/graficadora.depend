@@ -31,27 +31,32 @@
 	<SDL/SDL.H>
 	<string>
 
-1458533258 source:c:\users\rocka\documents\graficdiffuse\graficadora\main.cpp
+1458936703 source:c:\users\rocka\documents\graficdiffuse\graficadora\main.cpp
 	<bits/stdc++.h>
 	"herramientasgraficas.h"
+	"Funcion.h"
+	"FuncionesDifusas.h"
 
-1458669675 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\funcion.cpp
+1458881343 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\funcion.cpp
 	"Funcion.h"
 
-1458658680 c:\users\rocka\documents\graficdiffuse\graficadora\include\funcion.h
+1458881343 c:\users\rocka\documents\graficdiffuse\graficadora\include\funcion.h
 	<SDL/SDL.H>
 	"../herramientasgraficas.h"
 	<bits/stdc++.h>
 
-1458669828 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\director.cpp
+1458944018 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\director.cpp
 	"Director.h"
+	<SDL/SDL.H>
 
-1458669676 c:\users\rocka\documents\graficdiffuse\graficadora\include\director.h
+1458944218 c:\users\rocka\documents\graficdiffuse\graficadora\include\director.h
+	"Escena.h"
 
 1458846503 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\escena.cpp
 	"Escena.h"
 
-1458846503 c:\users\rocka\documents\graficdiffuse\graficadora\include\escena.h
+1458945137 c:\users\rocka\documents\graficdiffuse\graficadora\include\escena.h
+	"Director.h"
 
 1458842658 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\director.cpp
 	"Director.h"
@@ -76,5 +81,18 @@
 	<bits/stdc++.h>
 
 1458859464 c:\users\familia\documents\github\graficdiffuse\graficadora\include\funcionesdifusas.h
+	<bits/stdc++.h>
+
+1458881343 c:\users\rocka\documents\graficdiffuse\graficadora\include\funcionesdifusas.h
+	<bits/stdc++.h>
+
+1458881343 source:c:\users\rocka\documents\graficdiffuse\graficadora\src\funcionesdifusas.cpp
+	"FuncionesDifusas.h"
+	<bits/stdc++.h>
+
+1458936671 source:c:\users\rocka\documents\graficdiffuse\graficadora\funcionesdifusas.cpp
+	"FuncionesDifusas.h"
+
+1458936693 c:\users\rocka\documents\graficdiffuse\graficadora\funcionesdifusas.h
 	<bits/stdc++.h>
 

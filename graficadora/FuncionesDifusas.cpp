@@ -1,16 +1,6 @@
 #include "FuncionesDifusas.h"
-#include <bits/stdc++.h>
 using namespace std;
-FuncionesDifusas::FuncionesDifusas()
-{
-    //ctor
-}
-
-FuncionesDifusas::~FuncionesDifusas()
-{
-    //dtor
-}
-function<double (double)> FuncionesDifusas::retornarTrapesoidal(double a, double b, double c, double d)
+function<double (double)> retornarTrapesoidal(double a, double b, double c, double d)
 {
     return [a,b,c,d](double x)->double{
         if(x<a)return 0;

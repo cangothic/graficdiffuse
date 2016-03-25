@@ -9,14 +9,6 @@ SDL_Surface * screen;
 SDL_Surface * imagen;
 SDL_Event evento;
 
-//enum Funciones {
-//    Trapezoidal,
-//    Gaussiana,
-//    blue,
-//    Bell,
-//    Sigmoide
-//};
-
 void pintarRayitas(int cantidad,int unidad,bool isVertical){
     for(int i=0;i<cantidad+5;i++){
         int a = i*unidad;
@@ -36,11 +28,9 @@ int main(int argc, char * args[]){
     cargar_datos("img.bmp",imagen);
     int limiteIzquierdo = 0;
     int limiteDerecho = 10;
-    int x=0,y=0;
     int unidadX = tamHorizontal/(limiteDerecho-limiteIzquierdo);
     int unidadY = tamVertical-100;
-    FuncionesDifusas funcionDifusaUno;
-    function<double (double)> funcionPrueba = funcionDifusaUno.retornarTrapesoidal(1,3,4,5);
+    function<double (double)> funcionPrueba = retornarTrapesoidal(1,3,4,5);
     Funcion funcionUno(limiteIzquierdo,limiteDerecho,unidadX,unidadY,screen,imagen,funcionPrueba);
     pintarRayitas(2,unidadY,true);
     pintarRayitas((limiteDerecho-limiteIzquierdo)+1,unidadX,false);
