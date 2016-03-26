@@ -1,16 +1,17 @@
 #include "EscenaGraficadora.h"
 
-EscenaGraficadora::EscenaGraficadora()
+EscenaGraficadora::EscenaGraficadora(function<double (double)> _funcion)
 {
+    funcionAgraficar=new Funcion(10,1,director->screen,director->imagen,_funcion);
 }
 
 EscenaGraficadora::~EscenaGraficadora()
 {
-    //dtor
+    delete funcionAgraficar;
 }
 void EscenaGraficadora::actualizar()
 {
-
+    funcionAgraficar->actualizarFuncion();
 }
 
 void EscenaGraficadora::eventos()
@@ -20,5 +21,5 @@ void EscenaGraficadora::eventos()
 
 void EscenaGraficadora::dibujar()
 {
-
+    funcionAgraficar->imprimir();
 }

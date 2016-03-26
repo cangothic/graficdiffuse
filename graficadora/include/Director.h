@@ -3,18 +3,21 @@
 #include <SDL/SDL.H>
 #include"../herramientasgraficas.h"
 #include"Escena.h"
-
+#include<bits/stdc++.h>
+using namespace std;
 class Director
 {
     public:
         virtual ~Director();
         static Director *getInstance();
         void ciclo();
-        void cambiarEscena(Escena escena);
+        void cambiarEscena(string IdEscena);
         SDL_Surface * screen;
         SDL_Surface * imagen;
+        void adicionarEscena(Escena _escena);
 
     private:
+        map<string,Escena> mapaDeEscenas;
         Director();
         static Director* unicaInstancia;
         Escena escena;

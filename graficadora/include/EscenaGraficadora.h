@@ -3,6 +3,9 @@
 #include"Escena.h"
 #include"Funcion.h"
 #include"Director.h"
+#include"../FuncionesDifusas.h"
+#include<bits/stdc++.h>
+using namespace std;
 
 class EscenaGraficadora:public Escena
 {
@@ -10,13 +13,13 @@ class EscenaGraficadora:public Escena
         void actualizar();
         void eventos();
         void dibujar();
-        EscenaGraficadora();
+        EscenaGraficadora(function<double (double)> _funcion);
         virtual ~EscenaGraficadora();
 
     protected:
 
     private:
         Director *director=Director::getInstance();
-        //Funcion funcionAgraficar;
+        Funcion *funcionAgraficar;
 };
 #endif // ESCENAGRAFICADORA_H

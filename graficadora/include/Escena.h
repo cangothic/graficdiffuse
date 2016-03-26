@@ -1,6 +1,7 @@
 #ifndef ESCENA_H
 #define ESCENA_H
-
+#include<bits/stdc++.h>
+using namespace std;
 class Escena
 {
     public:
@@ -14,7 +15,7 @@ class Escena
     protected:
 
     private:
-        int idEscena;
+        string idEscena;
 };
 
 #endif // ESCENA_H

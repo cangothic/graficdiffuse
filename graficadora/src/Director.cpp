@@ -29,7 +29,11 @@ void Director::ciclo()
     }
 }
 
-void Director::cambiarEscena(Escena escena)
+void Director::cambiarEscena(string escena)
+{
+
+}
+void Director::adicionarEscena(Escena _escena)
 {
 
 }
