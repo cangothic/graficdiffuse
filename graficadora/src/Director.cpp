@@ -1,7 +1,8 @@
 #include "Director.h"
-#include <SDL/SDL.H>
+
 Director::Director(){
-    //ctor
+    crear_pantalla(800,600,screen);
+    cargar_datos("img.bmp",imagen);
 }
 
 Director::~Director(){
@@ -17,14 +18,14 @@ void Director::ciclo()
 {
     SDL_Event evento;
     while(true){
+        escena.eventos();
+        escena.actualizar();
+        escena.dibujar();
         while ( SDL_PollEvent(&evento)){
             if(evento.type==SDL_QUIT){
                 exit(0);
             }
         }
-        escena.eventos();
-        escena.actualizar();
-        escena.dibujar();
     }
 }
 

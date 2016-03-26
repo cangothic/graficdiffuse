@@ -1,21 +1,20 @@
 #ifndef ESCENA_H
 #define ESCENA_H
-#include"Director.h"
 
 class Escena
 {
     public:
         Escena();
-        void actualizar();
-        void eventos();
-        void dibujar();
+        virtual void actualizar();
+        virtual void eventos();
+        virtual void dibujar();
         virtual ~Escena();
 
 
     protected:
 
     private:
-        //Director director;
+        int idEscena;
 };
 
 #endif // ESCENA_H

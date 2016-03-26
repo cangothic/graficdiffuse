@@ -33,3 +33,16 @@ void pintar_pantalla(int _x,int &_y,SDL_Surface * &screen,SDL_Surface * &_imagen
     destino.y=(screen->h-_y);
     SDL_BlitSurface(_imagen,&origen,screen,&destino);
 }
+void pintarRayitas(int cantidad,int unidad,bool isVertical,SDL_Surface * &screen,SDL_Surface * &imagen){
+    for(int i=0;i<cantidad+5;i++){
+        int a = i*unidad;
+        for(int j=0;j<20;j++){
+            int b = j;
+            if(isVertical){
+                pintar_pantalla(b,a,screen,imagen);
+            }else{
+                pintar_pantalla(a,b,screen,imagen);
+            }
+        }
+    }
+}

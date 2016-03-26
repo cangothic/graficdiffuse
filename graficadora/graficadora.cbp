@@ -34,18 +34,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="FuncionesDifusas.cpp" />
+		<Unit filename="FuncionesDifusas.h" />
 		<Unit filename="herramientasgraficas.cpp" />
 		<Unit filename="herramientasgraficas.h" />
 		<Unit filename="img.bmp" />
 		<Unit filename="include/Director.h" />
 		<Unit filename="include/Escena.h" />
+		<Unit filename="include/EscenaGraficadora.h" />
 		<Unit filename="include/Funcion.h" />
-		<Unit filename="include/FuncionesDifusas.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Director.cpp" />
 		<Unit filename="src/Escena.cpp" />
+		<Unit filename="src/EscenaGraficadora.cpp" />
 		<Unit filename="src/Funcion.cpp" />
-		<Unit filename="src/FuncionesDifusas.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

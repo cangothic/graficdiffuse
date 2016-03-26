@@ -3,14 +3,12 @@
 #include <SDL/SDL.H>
 #include "../herramientasgraficas.h"
 #include <bits/stdc++.h>
-
+using namespace std;
 class Funcion
 {
     public:
-        Funcion(int _limiteIzquierdo,int _limiteDerecho,int _unidadX,int _unidadY,SDL_Surface * &_screen,SDL_Surface * &_imagen,function<double (double)> _funcion);
+        Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion);
         //constructor inicializa las variables del objeto
-        void pintarPlanoCartesiano();
-        //pinta el plano cartesiano;
         void actualizarFuncion(int x=0);
         //actualiza la suoerficie
         void imprimir();
@@ -22,12 +20,13 @@ class Funcion
     protected:
 
     private:
+        void pintarPlanoCartesiano();
         bool complemento=false;
         SDL_Surface * screen;
         SDL_Surface * imagen;
-        int limiteIzquierdo;
+        int cantidadDeUnidadesEnX;
         //desde donde se va a pintar la funucion
-        int limiteDerecho;
+        int cantidadDeUnidadesEnY;
         //hasta donde se va a pintar la funcion
         int unidadX,unidadY;
         //unidad que representa la forma en que se va pintar la funcion

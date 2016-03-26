@@ -9,3 +9,4 @@ void cargar_datos(string direccionImagen,SDL_Surface * &_imagen);
 /*carga la imagen de la variable direccionImagen en la variable_imagen*/
 void pintar_pantalla(int _x,int &_y,SDL_Surface * &screen,SDL_Surface * &_imagen);
 /*pinta la imagen en la ventana screen*/
+void pintarRayitas(int cantidad,int unidad,bool isVertical,SDL_Surface * &screen,SDL_Surface * &imagen);

@@ -1,7 +1,6 @@
 #include "Escena.h"
 Escena::Escena()
 {
-    director=Director.getInstance();
 }
 
 Escena::~Escena()

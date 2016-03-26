@@ -1,24 +1,24 @@
 #include "Funcion.h"
 
 using namespace std;
-Funcion::Funcion(int _limiteIzquierdo, int _limiteDerecho, int _unidadX, int _unidadY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion){
-    limiteIzquierdo=_limiteIzquierdo;
-    limiteDerecho=_limiteDerecho;
-    unidadX=_unidadX;
-    unidadY=_unidadY;
+Funcion::Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion){
+    cantidadDeUnidadesEnX=_cantidadDeUnidadesEnX;
+    cantidadDeUnidadesEnY=_cantidadDeUnidadesEnY;
     screen=_screen;
     imagen=_imagen;
     funcion=_funcion;
-
+    unidadX=screen->w/cantidadDeUnidadesEnX;
+    unidadY=screen->h/cantidadDeUnidadesEnY;
 }
 Funcion::~Funcion(){
     SDL_FreeSurface(imagen);
     SDL_FreeSurface(screen);
 }
 void Funcion::actualizarFuncion(int x){
+    pintarPlanoCartesiano();
     int y=0;
-    while(x<=limiteDerecho*unidadX){
-        double xTemp = ((x+0.0)/unidadX)+limiteIzquierdo;
+    while(x<=cantidadDeUnidadesEnX*unidadX){
+        double xTemp = ((x+0.0)/unidadX);
         double yTemp=funcion(xTemp);
         int yPast = y;
         y = round(yTemp*unidadY);
@@ -37,5 +37,6 @@ void Funcion::eventos(){
 
 }
 void Funcion::pintarPlanoCartesiano(){
-
+    pintarRayitas(cantidadDeUnidadesEnY,unidadY,true,screen,imagen);
+    pintarRayitas(cantidadDeUnidadesEnX+1,unidadX,false,screen,imagen);
 }
