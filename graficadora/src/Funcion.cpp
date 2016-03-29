@@ -8,7 +8,7 @@ Funcion::Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surf
     imagen=_imagen;
     funcion=_funcion;
     unidadX=screen->w/cantidadDeUnidadesEnX;
-    unidadY=screen->h/cantidadDeUnidadesEnY;
+    unidadY=(screen->h/cantidadDeUnidadesEnY)-1;
 }
 Funcion::~Funcion(){
     SDL_FreeSurface(imagen);

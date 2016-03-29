@@ -6,7 +6,7 @@
 	<SDL/SDL.H>
 	<string>
 
-1459023506 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\main.cpp
+1459201536 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\main.cpp
 	<bits/stdc++.h>
 	"herramientasgraficas.h"
 	"Funcion.h"
@@ -125,7 +125,7 @@
 1458963377 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\escena.cpp
 	"Escena.h"
 
-1459023157 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\funcion.cpp
+1459054770 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\funcion.cpp
 	"Funcion.h"
 
 1459029871 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\escenagraficadora.cpp
