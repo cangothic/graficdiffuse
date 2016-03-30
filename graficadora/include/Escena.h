@@ -10,12 +10,12 @@ class Escena
         virtual void eventos();
         virtual void dibujar();
         virtual ~Escena();
-
+        string idEscena;
 
     protected:
 
     private:
-        string idEscena;
+
 };
 
 #endif // ESCENA_H

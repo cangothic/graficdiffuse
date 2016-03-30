@@ -8,19 +8,21 @@ using namespace std;
 class Director
 {
     public:
+        map<string,Escena> mapa;
         virtual ~Director();
         static Director *getInstance();
         void ciclo();
-        void cambiarEscena(string IdEscena);
+        void cambiarEscena(string _idEscena);
         SDL_Surface * screen;
         SDL_Surface * imagen;
-        void adicionarEscena(Escena _escena);
+        void adicionarEscena(Escena* _escena);
 
     private:
         map<string,Escena> mapaDeEscenas;
         Director();
         static Director* unicaInstancia;
-        Escena escena;
+        Escena* escena;
+        SDL_Event evento;
 
 
 };

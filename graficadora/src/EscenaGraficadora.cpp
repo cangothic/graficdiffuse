@@ -1,7 +1,8 @@
 #include "EscenaGraficadora.h"
 
-EscenaGraficadora::EscenaGraficadora(function<double (double)> _funcion)
+EscenaGraficadora::EscenaGraficadora(function<double (double)> _funcion,string _idEscena)
 {
+    idEscena = _idEscena;
     funcionAgraficar=new Funcion(10,1,director->screen,director->imagen,_funcion);
 }
 
@@ -14,12 +15,12 @@ void EscenaGraficadora::actualizar()
     funcionAgraficar->actualizarFuncion();
 }
 
-void EscenaGraficadora::eventos()
-{
-
-}
-
 void EscenaGraficadora::dibujar()
 {
     funcionAgraficar->imprimir();
+}
+
+
+void EscenaGraficadora::eventos()
+{
 }

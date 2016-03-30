@@ -10,4 +10,3 @@ function<double (double)> retornarTrapesoidal(double a, double b, double c, doub
         return 0;
     };
 }
-
