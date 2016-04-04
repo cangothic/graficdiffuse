@@ -30,5 +30,15 @@ namespace Interfaz
             info.Arguments = "brian carlos";
             Process.Start(info);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void a_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

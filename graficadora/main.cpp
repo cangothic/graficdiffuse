@@ -9,6 +9,11 @@
 using namespace std;
 
 int main(int argc, char * args[]){
+    string funcion=args[1];
+    string a=args[2];
+    string b=args[3];
+    string c=args[4];
+    string d=args[5];
     SDL_Event evento;
     function<double (double)> funcionPrueba = retornarTrapesoidal(1,3,4,5);
     function<double (double)> funcionPrueba2 = retornarGaussiana(0.3,0.5);
