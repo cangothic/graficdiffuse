@@ -16,7 +16,7 @@ namespace Interfaz
         public Form1()
         {
             InitializeComponent();
-            funcionAGraficar.SelectedItem = "trapezoidal";
+            funcionAGraficar.SelectedItem = "Trapezoidal";
             textBox1.Text = "0";
             textBox2.Text = "0";
             textBox3.Text = "0";
@@ -33,13 +33,16 @@ namespace Interfaz
             info.WorkingDirectory = @"..\..\..\..\..\graficadora\bin\Debug\";
             //los parametros van separados por espacios
             validarNoVacios();
-            string valorFuncion = funcionAGraficar.SelectedItem.ToString();
+            string valorFuncion = (string)funcionAGraficar.SelectedItem;
             string valorA = textBox1.Text;
             string valorB = textBox2.Text;
             string valorC = textBox3.Text;
             string valorD = textBox4.Text;
-            info.Arguments = valorFuncion+" " +valorA+" "+valorB+" "+valorC+" "+valorD;
-            Process.Start(info);
+            if (validar(valorFuncion, valorA, valorB, valorC, valorD)==true)
+            {
+                info.Arguments = valorFuncion + " " + valorA + " " + valorB + " " + valorC + " " + valorD;
+                Process.Start(info);
+            }
         }
         private bool validar(string valorFuncion,string valorA,string valorB,string valorC,string valorD)
         {
@@ -53,6 +56,10 @@ namespace Interfaz
                 {
                     MessageBox.Show("B y C deben ser distintos en la funcion trapezoidal");
                     return false;
+                }
+                else if(Double.Parse(valorA)>Double.Parse(valorB)|| Double.Parse(valorB)>Double.Parse(valorC)|| Double.Parse(valorC) > Double.Parse(valorD))
+                {
+                    MessageBox.Show("los parametros deben ser A>=B>=C>=D");
                 }
             }
             else if(valorFuncion== "Gaussiana" && valorA == "0")
@@ -150,16 +157,16 @@ namespace Interfaz
 
         private void funcionAGraficar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (funcionAGraficar.SelectedItem.ToString().Equals("Trapezoidal"))
+            if (funcionAGraficar.SelectedItem.Equals("Trapezoidal"))
             {
                 showTrapezoidal();
-            }else if (funcionAGraficar.SelectedItem.ToString().Equals("Gaussiana"))
+            }else if (funcionAGraficar.SelectedItem.Equals("Gaussiana"))
             {
                 showGaussiana();
-            }else if (funcionAGraficar.SelectedItem.ToString().Equals("Bell"))
+            }else if (funcionAGraficar.SelectedItem.Equals("Bell"))
             {
                 showBell();
-            }else if (funcionAGraficar.SelectedItem.ToString().Equals("Sigmoide"))
+            }else if (funcionAGraficar.SelectedItem.Equals("Sigmoide"))
             {
                 showSigmoide();
             }

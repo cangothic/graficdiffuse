@@ -10,20 +10,21 @@ using namespace std;
 
 int main(int argc, char * args[]){
     string funcion=args[1];
-    string a=args[2];
-    string b=args[3];
-    string c=args[4];
-    string d=args[5];
+
+    double valorA = atof(args[2]);
+    double valorB = atof(args[3]);
+    double valorC = atof(args[4]);
+    double valorD = atof(args[5]);
     SDL_Event evento;
     function<double (double)> funcionAGraficar;
     if(funcion=="Trapezoidal"){
-        funcionAGraficar = retornarTrapesoidal(1,3,4,5);
+        funcionAGraficar = retornarTrapesoidal(valorA,valorB,valorC,valorD);
     }else if(funcion=="Gaussiana"){
-        funcionAGraficar = retornarGaussiana(0.3,0.5);
+        funcionAGraficar = retornarGaussiana(valorA,valorC);
     }else if(funcion=="Bell"){
-        funcionAGraficar = retornarBell(0.3,4,0.5);
+        funcionAGraficar = retornarBell(valorA,valorB,valorC);
     }else if(funcion=="Sigmoide"){
-        funcionAGraficar = retornarSigmoide(3,2);
+        funcionAGraficar = retornarSigmoide(valorA,valorB);
     }
     EscenaGraficadora escena(funcionAGraficar,"grafica");
     /*args[0] es el path del .exe*/
