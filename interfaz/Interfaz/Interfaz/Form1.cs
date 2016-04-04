@@ -174,12 +174,18 @@ namespace Interfaz
         private void validarEntradaNumero(KeyPressEventArgs e,TextBox textBox)
         {
             char ch = e.KeyChar;
+
+            if (ch==45 && textBox.Text.Length!=0 && textBox.SelectedText.Length != textBox.Text.Length)
+            {
+                e.Handled = true;
+                return;
+            }
             if(ch==46 && textBox.Text.IndexOf('.') != -1)
             {
                 e.Handled = true;
                 return;
             }
-            if(!char.IsDigit(ch) && ch!=8 && ch != 46)
+            if(!char.IsDigit(ch) && ch!=8 && ch != 46 && ch!=45)
             {
                 e.Handled = true;
             }
