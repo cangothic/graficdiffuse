@@ -10,21 +10,25 @@ using namespace std;
 int main(int argc, char * args[]){
     function<double (double)> funcionPrueba = retornarTrapesoidal(1,3,4,5);
     EscenaGraficadora escena(funcionPrueba,"grafica");
-
-    //el parametro 0 es el path del exe
-    //descomentar si vas a usarlos!! si no explota boom!
-    //string parametro1 = args[1]; //parametro 1
-    //string parametro2 = args[2]; //parametro 2
-
+    /*args[0] es el path del .exe*/
+    if(argc>1){
+        for(int i=1;i<argc;i++){
+            string parametro = args[i];
+            cout<<"el parametro "<<i<<" es "<<parametro<<endl;
+        }
+    }
+    else{
+        cout<<"no tienes parametros"<<endl;
+    }
     Escena* x = &escena;
     x->actualizar();
     while(true){
         x->dibujar();
     }
-//
-//    Director* director = Director::getInstance();
-//    director->adicionarEscena(&escena);
-//    director->cambiarEscena(escena.idEscena);
-//    director->ciclo();
-return 0;
+
+/*    Director* director = Director::getInstance();
+    director->adicionarEscena(&escena);
+    director->cambiarEscena(escena.idEscena);
+    director->ciclo();*/
+    return 0;
 }
