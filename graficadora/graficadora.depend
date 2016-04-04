@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1459022843 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\herramientasgraficas.cpp
+1459795732 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\herramientasgraficas.cpp
 	"herramientasgraficas.h"
 
-1459022950 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\herramientasgraficas.h
+1459795732 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\herramientasgraficas.h
 	<SDL/SDL.H>
 	<string>
 
@@ -110,39 +110,39 @@
 1458936693 c:\users\rocka\documents\graficdiffuse\graficadora\funcionesdifusas.h
 	<bits/stdc++.h>
 
-1459022234 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\include\funcion.h
+1459795732 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\include\funcion.h
 	<SDL/SDL.H>
 	"../herramientasgraficas.h"
 	<bits/stdc++.h>
 
-1458962636 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\funcionesdifusas.h
+1459795732 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\funcionesdifusas.h
 	<bits/stdc++.h>
 
-1459298186 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\director.cpp
+1459795732 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\director.cpp
 	"Director.h"
 
-1459296114 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\include\director.h
+1459795732 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\include\director.h
 	<SDL/SDL.H>
 	"../herramientasgraficas.h"
 	"Escena.h"
 	<bits/stdc++.h>
 
-1459298198 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\include\escena.h
+1459795732 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\include\escena.h
 	<bits/stdc++.h>
 
-1459290395 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\funcionesdifusas.cpp
+1459795732 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\funcionesdifusas.cpp
 	"FuncionesDifusas.h"
 
-1458963377 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\escena.cpp
+1459795732 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\escena.cpp
 	"Escena.h"
 
-1459054770 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\funcion.cpp
+1459795732 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\funcion.cpp
 	"Funcion.h"
 
-1459298202 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\escenagraficadora.cpp
+1459795732 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\src\escenagraficadora.cpp
 	"EscenaGraficadora.h"
 
-1459298193 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\include\escenagraficadora.h
+1459795732 c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\include\escenagraficadora.h
 	"Escena.h"
 	"Funcion.h"
 	"Director.h"

@@ -5,9 +5,11 @@
 #include "Escena.h"
 #include "EscenaGraficadora.h"
 #include "Director.h"
+#include <SDL/SDL.h>
 using namespace std;
 
 int main(int argc, char * args[]){
+    SDL_Event evento;
     function<double (double)> funcionPrueba = retornarTrapesoidal(1,3,4,5);
     function<double (double)> funcionPrueba2 = retornarGaussiana(0.3,0.5);
     function<double (double)> funcionPrueba3 = retornarBell(0.3,4,0.5);
@@ -27,6 +29,11 @@ int main(int argc, char * args[]){
     x->actualizar();
     while(true){
         x->dibujar();
+        while ( SDL_PollEvent(&evento)){
+            if(evento.type==SDL_QUIT){
+                exit(0);
+            }
+        }
     }
 
 /*    Director* director = Director::getInstance();

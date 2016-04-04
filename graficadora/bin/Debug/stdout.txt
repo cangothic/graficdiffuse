@@ -1,2 +1,1 @@
-el parametro 1 es brian
-el parametro 2 es carlos
+no tienes parametros
