@@ -17,17 +17,20 @@
 
 1458064156 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\director.cpp
 
-1458860545 source:c:\users\familia\documents\github\graficdiffuse\graficadora\main.cpp
+1459760092 source:c:\users\familia\documents\github\graficdiffuse\graficadora\main.cpp
 	<bits/stdc++.h>
 	"herramientasgraficas.h"
 	"Funcion.h"
 	"FuncionesDifusas.h"
+	"Escena.h"
+	"EscenaGraficadora.h"
+	"Director.h"
 
-1458842657 c:\users\familia\documents\github\graficdiffuse\graficadora\herramientasgraficas.h
+1459756191 c:\users\familia\documents\github\graficdiffuse\graficadora\herramientasgraficas.h
 	<SDL/SDL.H>
 	<string>
 
-1458842657 source:c:\users\familia\documents\github\graficdiffuse\graficadora\herramientasgraficas.cpp
+1459756191 source:c:\users\familia\documents\github\graficdiffuse\graficadora\herramientasgraficas.cpp
 	"herramientasgraficas.h"
 
 1458519502 source:c:\users\rocka\documents\graficdiffuse\graficadora\herramientasgraficas.cpp
@@ -64,20 +67,25 @@
 1458945137 c:\users\rocka\documents\graficdiffuse\graficadora\include\escena.h
 	"Director.h"
 
-1458842658 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\director.cpp
+1459756191 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\director.cpp
 	"Director.h"
 
-1458842657 c:\users\familia\documents\github\graficdiffuse\graficadora\include\director.h
+1459756191 c:\users\familia\documents\github\graficdiffuse\graficadora\include\director.h
+	<SDL/SDL.H>
+	"../herramientasgraficas.h"
+	"Escena.h"
+	<bits/stdc++.h>
 
-1458842658 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\escena.cpp
+1459756191 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\escena.cpp
 	"Escena.h"
 
-1458842657 c:\users\familia\documents\github\graficdiffuse\graficadora\include\escena.h
+1459756191 c:\users\familia\documents\github\graficdiffuse\graficadora\include\escena.h
+	<bits/stdc++.h>
 
-1458859934 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\funcion.cpp
+1459756191 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\funcion.cpp
 	"Funcion.h"
 
-1458859937 c:\users\familia\documents\github\graficdiffuse\graficadora\include\funcion.h
+1459756191 c:\users\familia\documents\github\graficdiffuse\graficadora\include\funcion.h
 	<SDL/SDL.H>
 	"../herramientasgraficas.h"
 	<bits/stdc++.h>
@@ -140,4 +148,20 @@
 	"Director.h"
 	"../FuncionesDifusas.h"
 	<bits/stdc++.h>
+
+1459756191 source:c:\users\familia\documents\github\graficdiffuse\graficadora\funcionesdifusas.cpp
+	"FuncionesDifusas.h"
+
+1458943628 c:\users\familia\documents\github\graficdiffuse\graficadora\funcionesdifusas.h
+	<bits/stdc++.h>
+
+1459756191 c:\users\familia\documents\github\graficdiffuse\graficadora\include\escenagraficadora.h
+	"Escena.h"
+	"Funcion.h"
+	"Director.h"
+	"../FuncionesDifusas.h"
+	<bits/stdc++.h>
+
+1459756191 source:c:\users\familia\documents\github\graficdiffuse\graficadora\src\escenagraficadora.cpp
+	"EscenaGraficadora.h"
 
