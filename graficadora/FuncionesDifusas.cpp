@@ -10,3 +10,18 @@ function<double (double)> retornarTrapesoidal(double a, double b, double c, doub
         return 0;
     };
 }
+function<double (double)> retornarGaussiana(double a,double c){
+    return [c,a](double x)->double{
+        return exp(-0.5*pow((x-c)/a,2));
+    };
+}
+function<double (double)> retornarBell(double a,double b,double c){
+    return [a,b,c](double x)->double{
+        return 1/(1+pow(fabs((x-c)/a),(2*b)));
+    };
+}
+function<double (double)> retornarSigmoide(double a,double b){
+    return [a,b](double x)->double{
+      return 1/(1+exp(-a*(x-b)));
+    };
+}

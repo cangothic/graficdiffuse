@@ -9,7 +9,10 @@ using namespace std;
 
 int main(int argc, char * args[]){
     function<double (double)> funcionPrueba = retornarTrapesoidal(1,3,4,5);
-    EscenaGraficadora escena(funcionPrueba,"grafica");
+    function<double (double)> funcionPrueba2 = retornarGaussiana(0.3,0.5);
+    function<double (double)> funcionPrueba3 = retornarBell(0.3,4,0.5);
+    function<double (double)> funcionPrueba4 = retornarSigmoide(3,2);
+    EscenaGraficadora escena(funcionPrueba4,"grafica");
     /*args[0] es el path del .exe*/
     if(argc>1){
         for(int i=1;i<argc;i++){
