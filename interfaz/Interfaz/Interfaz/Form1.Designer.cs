@@ -31,18 +31,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.funcionAGraficar = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.a = new System.Windows.Forms.DomainUpDown();
-            this.b = new System.Windows.Forms.DomainUpDown();
-            this.c = new System.Windows.Forms.DomainUpDown();
-            this.d = new System.Windows.Forms.DomainUpDown();
+            this.labelB = new System.Windows.Forms.Label();
+            this.labelC = new System.Windows.Forms.Label();
+            this.labelD = new System.Windows.Forms.Label();
+            this.labelA = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(310, 277);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(74, 238);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "enviar";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,67 +54,114 @@
             // funcionAGraficar
             // 
             this.funcionAGraficar.FormattingEnabled = true;
-            this.funcionAGraficar.Location = new System.Drawing.Point(301, 115);
+            this.funcionAGraficar.Items.AddRange(new object[] {
+            "Trapezoidal",
+            "Gaussiana",
+            "Bell",
+            "Sigmoide"});
+            this.funcionAGraficar.Location = new System.Drawing.Point(61, 53);
+            this.funcionAGraficar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.funcionAGraficar.Name = "funcionAGraficar";
-            this.funcionAGraficar.Size = new System.Drawing.Size(121, 28);
+            this.funcionAGraficar.Size = new System.Drawing.Size(90, 21);
             this.funcionAGraficar.TabIndex = 1;
+            this.funcionAGraficar.Text = "Trapesoidal";
+            this.funcionAGraficar.SelectedIndexChanged += new System.EventHandler(this.funcionAGraficar_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(297, 47);
+            this.label1.Location = new System.Drawing.Point(58, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 20);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "escoja un funcion";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // a
+            // labelB
             // 
-            this.a.Location = new System.Drawing.Point(24, 194);
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(120, 26);
-            this.a.TabIndex = 3;
-            this.a.Text = "domainUpDown1";
-            this.a.SelectedItemChanged += new System.EventHandler(this.a_SelectedItemChanged);
+            this.labelB.AutoSize = true;
+            this.labelB.Location = new System.Drawing.Point(156, 88);
+            this.labelB.Name = "labelB";
+            this.labelB.Size = new System.Drawing.Size(14, 13);
+            this.labelB.TabIndex = 8;
+            this.labelB.Text = "B";
             // 
-            // b
+            // labelC
             // 
-            this.b.Location = new System.Drawing.Point(203, 194);
-            this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(120, 26);
-            this.b.TabIndex = 4;
-            this.b.Text = "domainUpDown2";
+            this.labelC.AutoSize = true;
+            this.labelC.Location = new System.Drawing.Point(46, 156);
+            this.labelC.Name = "labelC";
+            this.labelC.Size = new System.Drawing.Size(14, 13);
+            this.labelC.TabIndex = 9;
+            this.labelC.Text = "C";
             // 
-            // c
+            // labelD
             // 
-            this.c.Location = new System.Drawing.Point(408, 194);
-            this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(120, 26);
-            this.c.TabIndex = 5;
-            this.c.Text = "domainUpDown3";
+            this.labelD.AutoSize = true;
+            this.labelD.Location = new System.Drawing.Point(156, 156);
+            this.labelD.Name = "labelD";
+            this.labelD.Size = new System.Drawing.Size(15, 13);
+            this.labelD.TabIndex = 10;
+            this.labelD.Text = "D";
             // 
-            // d
+            // labelA
             // 
-            this.d.Location = new System.Drawing.Point(584, 194);
-            this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(120, 26);
-            this.d.TabIndex = 6;
-            this.d.Text = "domainUpDown4";
+            this.labelA.AutoSize = true;
+            this.labelA.Location = new System.Drawing.Point(46, 88);
+            this.labelA.Name = "labelA";
+            this.labelA.Size = new System.Drawing.Size(14, 13);
+            this.labelA.TabIndex = 11;
+            this.labelA.Text = "A";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1, 113);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(107, 113);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 13;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(1, 172);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 14;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(107, 172);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 15;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 402);
-            this.Controls.Add(this.d);
-            this.Controls.Add(this.c);
-            this.Controls.Add(this.b);
-            this.Controls.Add(this.a);
+            this.ClientSize = new System.Drawing.Size(232, 315);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelA);
+            this.Controls.Add(this.labelD);
+            this.Controls.Add(this.labelC);
+            this.Controls.Add(this.labelB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.funcionAGraficar);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -124,10 +174,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox funcionAGraficar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DomainUpDown a;
-        private System.Windows.Forms.DomainUpDown b;
-        private System.Windows.Forms.DomainUpDown c;
-        private System.Windows.Forms.DomainUpDown d;
+        private System.Windows.Forms.Label labelB;
+        private System.Windows.Forms.Label labelC;
+        private System.Windows.Forms.Label labelD;
+        private System.Windows.Forms.Label labelA;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 

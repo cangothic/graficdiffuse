@@ -15,11 +15,17 @@ int main(int argc, char * args[]){
     string c=args[4];
     string d=args[5];
     SDL_Event evento;
-    function<double (double)> funcionPrueba = retornarTrapesoidal(1,3,4,5);
-    function<double (double)> funcionPrueba2 = retornarGaussiana(0.3,0.5);
-    function<double (double)> funcionPrueba3 = retornarBell(0.3,4,0.5);
-    function<double (double)> funcionPrueba4 = retornarSigmoide(3,2);
-    EscenaGraficadora escena(funcionPrueba4,"grafica");
+    function<double (double)> funcionAGraficar;
+    if(funcion=="Trapezoidal"){
+        funcionAGraficar = retornarTrapesoidal(1,3,4,5);
+    }else if(funcion=="Gaussiana"){
+        funcionAGraficar = retornarGaussiana(0.3,0.5);
+    }else if(funcion=="Bell"){
+        funcionAGraficar = retornarBell(0.3,4,0.5);
+    }else if(funcion=="Sigmoide"){
+        funcionAGraficar = retornarSigmoide(3,2);
+    }
+    EscenaGraficadora escena(funcionAGraficar,"grafica");
     /*args[0] es el path del .exe*/
     if(argc>1){
         for(int i=1;i<argc;i++){
@@ -40,10 +46,5 @@ int main(int argc, char * args[]){
             }
         }
     }
-
-/*    Director* director = Director::getInstance();
-    director->adicionarEscena(&escena);
-    director->cambiarEscena(escena.idEscena);
-    director->ciclo();*/
     return 0;
 }
