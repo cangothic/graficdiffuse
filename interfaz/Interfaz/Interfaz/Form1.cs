@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,14 @@ namespace Interfaz
         private void button1_Click(object sender, EventArgs e)
         {
             //los parametros van separados por espacios
-            string parametros = "brian carlos";
-            
-            System.Diagnostics.Process.Start(@"..\..\..\..\..\graficadora\bin\Debug\graficadora.exe",parametros);
+            ProcessStartInfo info = new ProcessStartInfo();
+
+            info.UseShellExecute = true;
+            info.FileName = "graficadora.exe";
+            info.WorkingDirectory = @"..\..\..\..\..\graficadora\bin\Debug\";
+            //los parametros van separados por espacios
+            info.Arguments = "brian carlos";
+            Process.Start(info);
         }
     }
 }
