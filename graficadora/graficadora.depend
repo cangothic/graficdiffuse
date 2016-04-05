@@ -18,7 +18,7 @@
 
 1458064156 source:c:\users\rocka\onedrive\documentos\github\graficdiffuse\graficadora\director.cpp
 
-1459766116 source:c:\users\familia\documents\github\graficdiffuse\graficadora\main.cpp
+1459802297 source:c:\users\familia\documents\github\graficdiffuse\graficadora\main.cpp
 	<bits/stdc++.h>
 	"herramientasgraficas.h"
 	"Funcion.h"
@@ -26,6 +26,7 @@
 	"Escena.h"
 	"EscenaGraficadora.h"
 	"Director.h"
+	<SDL/SDL.h>
 
 1459756191 c:\users\familia\documents\github\graficdiffuse\graficadora\herramientasgraficas.h
 	<SDL/SDL.H>
