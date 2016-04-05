@@ -1,0 +1,9 @@
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\bin\Debug\Interfaz.exe.config
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\bin\Debug\Interfaz.exe
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\bin\Debug\Interfaz.pdb
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\obj\Debug\Interfaz.csprojResolveAssemblyReference.cache
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\obj\Debug\Interfaz.Form1.resources
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\obj\Debug\Interfaz.Properties.Resources.resources
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.Cache
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\obj\Debug\Interfaz.exe
+C:\Users\Familia\Documents\GitHub\graficdiffuse\interfaz\Interfaz\Interfaz\obj\Debug\Interfaz.pdb
