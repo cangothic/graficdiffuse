@@ -18,7 +18,7 @@ void Funcion::actualizarFuncion(int x){
     pintarPlanoCartesiano();
     int y=0;
     while(x<=cantidadDeUnidadesEnX*unidadX){
-        double xTemp = ((x+0.0)/unidadX);
+        double xTemp = ((x+0.0)/unidadX)-10;
         double yTemp=funcion(xTemp);
         int yPast = y;
         y = round(yTemp*unidadY);

@@ -3,7 +3,7 @@
 EscenaGraficadora::EscenaGraficadora(function<double (double)> _funcion,string _idEscena)
 {
     idEscena = _idEscena;
-    funcionAgraficar=new Funcion(10,1,director->screen,director->imagen,_funcion);
+    funcionAgraficar=new Funcion(20,1,director->screen,director->imagen,_funcion);
 }
 
 EscenaGraficadora::~EscenaGraficadora()
