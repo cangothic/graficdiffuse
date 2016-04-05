@@ -52,14 +52,11 @@ namespace Interfaz
                 {
                     MessageBox.Show("A y B deben ser distintos en la funcion trapezoidal");
                     return false;
-                }else if(valorB == valorC)
-                {
-                    MessageBox.Show("B y C deben ser distintos en la funcion trapezoidal");
-                    return false;
                 }
                 else if(Double.Parse(valorA)>Double.Parse(valorB)|| Double.Parse(valorB)>Double.Parse(valorC)|| Double.Parse(valorC) > Double.Parse(valorD))
                 {
                     MessageBox.Show("los parametros deben ser A>=B>=C>=D");
+                    return false;
                 }
             }
             else if(valorFuncion== "Gaussiana" && valorA == "0")
