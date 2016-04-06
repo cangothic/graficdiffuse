@@ -13,7 +13,7 @@ class EscenaGraficadora:public Escena
         void actualizar();
         void eventos();
         void dibujar();
-        EscenaGraficadora(function<double (double)> _funcion,string _idEscena);
+        EscenaGraficadora(function<double (double)> _funcion,string _idEscena,bool discreta);
         virtual ~EscenaGraficadora();
 
     protected:

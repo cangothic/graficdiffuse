@@ -39,6 +39,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
@@ -60,7 +61,7 @@
             "Bell",
             "Sigmoide"});
             this.funcionAGraficar.Location = new System.Drawing.Point(61, 53);
-            this.funcionAGraficar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.funcionAGraficar.Margin = new System.Windows.Forms.Padding(2);
             this.funcionAGraficar.Name = "funcionAGraficar";
             this.funcionAGraficar.Size = new System.Drawing.Size(90, 21);
             this.funcionAGraficar.TabIndex = 1;
@@ -146,11 +147,23 @@
             this.textBox4.TabIndex = 15;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(74, 215);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(65, 17);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Discreta";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(232, 315);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -182,6 +195,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

@@ -1,7 +1,7 @@
 #include "Funcion.h"
 
 using namespace std;
-Funcion::Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion){
+Funcion::Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion,bool _discreta){
     cantidadDeUnidadesEnX=_cantidadDeUnidadesEnX;
     cantidadDeUnidadesEnY=_cantidadDeUnidadesEnY;
     screen=_screen;
@@ -9,6 +9,7 @@ Funcion::Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surf
     funcion=_funcion;
     unidadX=screen->w/cantidadDeUnidadesEnX;
     unidadY=(screen->h/cantidadDeUnidadesEnY)-10;
+    discreta = _discreta;
 }
 Funcion::~Funcion(){
     SDL_FreeSurface(imagen);
@@ -23,10 +24,16 @@ void Funcion::actualizarFuncion(int x){
         int yPast = y;
         y = round(yTemp*unidadY);
         if(yPast==0)yPast = y;
-        for(int i=min(yPast,y);i<=max(y,yPast);i++){
-            pintar_pantalla(x,i,screen,imagen);
+
+        if(discreta){
+            pintar_pantalla(x,y,screen,imagen);
+            x+=unidadX;
+        }else{
+            for(int i=min(yPast,y);i<=max(y,yPast);i++){
+                pintar_pantalla(x,i,screen,imagen);
+            }
+            x++;
         }
-        x++;
     }
 }
 void Funcion::imprimir(){

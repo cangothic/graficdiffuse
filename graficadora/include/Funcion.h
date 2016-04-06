@@ -7,7 +7,7 @@ using namespace std;
 class Funcion
 {
     public:
-        Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion);
+        Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion,bool _discreta);
         //constructor inicializa las variables del objeto
         void actualizarFuncion(int x=0);
         //actualiza la suoerficie
@@ -31,6 +31,7 @@ class Funcion
         int unidadX,unidadY;
         //unidad que representa la forma en que se va pintar la funcion
         function<double (double)> funcion;
+        bool discreta;
 
 };
 

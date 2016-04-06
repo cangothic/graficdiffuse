@@ -38,9 +38,15 @@ namespace Interfaz
             string valorB = textBox2.Text;
             string valorC = textBox3.Text;
             string valorD = textBox4.Text;
+
+            string valorDiscreto="false";
+            if (checkBox1.Checked == true)
+            {
+                valorDiscreto = "true";
+            }
             if (validar(valorFuncion, valorA, valorB, valorC, valorD)==true)
             {
-                info.Arguments = valorFuncion + " " + valorA + " " + valorB + " " + valorC + " " + valorD;
+                info.Arguments = valorFuncion + " " + valorA + " " + valorB + " " + valorC + " " + valorD+" "+valorDiscreto;
                 Process.Start(info);
             }
         }
@@ -225,6 +231,11 @@ namespace Interfaz
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             validarEntradaNumero(e, textBox4);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

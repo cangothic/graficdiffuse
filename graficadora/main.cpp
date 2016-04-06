@@ -15,6 +15,11 @@ int main(int argc, char * args[]){
     double valorB = atof(args[3]);
     double valorC = atof(args[4]);
     double valorD = atof(args[5]);
+    string valorDiscretoParametro = args[6];
+    bool valorDiscreto = false;
+    if(valorDiscretoParametro=="true"){
+        valorDiscreto = true;
+    }
     SDL_Event evento;
     function<double (double)> funcionAGraficar;
     if(funcion=="Trapezoidal"){
@@ -26,7 +31,7 @@ int main(int argc, char * args[]){
     }else if(funcion=="Sigmoide"){
         funcionAGraficar = retornarSigmoide(valorA,valorB);
     }
-    EscenaGraficadora escena(funcionAGraficar,"grafica");
+    EscenaGraficadora escena(funcionAGraficar,"grafica",valorDiscreto);
     /*args[0] es el path del .exe*/
     if(argc>1){
         for(int i=1;i<argc;i++){
