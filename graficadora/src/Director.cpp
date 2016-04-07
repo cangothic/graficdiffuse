@@ -19,6 +19,7 @@ Director* Director::getInstance(){
 void Director::ciclo()
 {
     while(true){
+        SDL_Delay(150);
         escena->eventos();
         escena->actualizar();
         escena->dibujar();
@@ -30,18 +31,12 @@ void Director::ciclo()
     }
 }
 
-//void Director::cambiarEscena(string _escena)
-//{
-//    escena = &mapa[_escena];
-//}
-
 void Director::cambiarEscena(string _idEscena)
 {
     if(mapa.count(_idEscena)){
-        escena = &(mapa[_idEscena]);
-        map<string,Escena> mapa2 = mapa;
+        escena = (mapa[_idEscena]);
     }else{
-        cout<<"no me importa que no halla cout eres un estupido"<<endl;
+        cout<<"la escena no existe"<<endl;
     }
 
 }
@@ -49,7 +44,7 @@ void Director::cambiarEscena(string _idEscena)
 void Director::adicionarEscena(Escena* _escena)
 {
     if(!mapa.count(_escena->idEscena)){
-        mapa[_escena->idEscena] = *_escena;
+        mapa[_escena->idEscena] = _escena;
     }
 }
 

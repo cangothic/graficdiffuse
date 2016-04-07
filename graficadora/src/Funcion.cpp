@@ -15,11 +15,13 @@ Funcion::~Funcion(){
     SDL_FreeSurface(imagen);
     SDL_FreeSurface(screen);
 }
-void Funcion::actualizarFuncion(int x){
+void Funcion::actualizarFuncion(int desplazamiento){
+    SDL_FillRect(screen,NULL, SDL_MapRGBA(screen->format,255,255,255,0));
     pintarPlanoCartesiano();
+    int x=0;
     int y=0;
     while(x<=cantidadDeUnidadesEnX*unidadX){
-        double xTemp = ((x+0.0)/unidadX)-10;
+        double xTemp = ((x+0.0)/unidadX)+desplazamiento;
         double yTemp=funcion(xTemp);
         int yPast = y;
         y = round(yTemp*unidadY);

@@ -21,5 +21,6 @@ class EscenaGraficadora:public Escena
     private:
         Director *director=Director::getInstance();
         Funcion *funcionAgraficar;
+        int desplazar=0;
 };
 #endif // ESCENAGRAFICADORA_H

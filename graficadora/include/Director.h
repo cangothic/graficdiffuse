@@ -8,7 +8,6 @@ using namespace std;
 class Director
 {
     public:
-        map<string,Escena> mapa;
         virtual ~Director();
         static Director *getInstance();
         void ciclo();
@@ -18,7 +17,7 @@ class Director
         void adicionarEscena(Escena* _escena);
 
     private:
-        map<string,Escena> mapaDeEscenas;
+        map<string,Escena*> mapa;
         Director();
         static Director* unicaInstancia;
         Escena* escena;

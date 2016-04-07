@@ -9,7 +9,7 @@ class Funcion
     public:
         Funcion(int _cantidadDeUnidadesEnX, int _cantidadDeUnidadesEnY,SDL_Surface*& _screen, SDL_Surface*& _imagen, function<double (double)> _funcion,bool _discreta);
         //constructor inicializa las variables del objeto
-        void actualizarFuncion(int x=0);
+        void actualizarFuncion(int desplazamiento=0);
         //actualiza la suoerficie
         void imprimir();
         //muestra la suoerficie

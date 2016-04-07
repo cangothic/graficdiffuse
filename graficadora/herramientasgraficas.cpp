@@ -22,16 +22,14 @@ void cargar_datos(string direccionImagen,SDL_Surface * &_imagen){
     }
 }
 
-void pintar_pantalla(int _x,int &_y,SDL_Surface * &screen,SDL_Surface * &_imagen){
+void pintar_pantalla(int _x,int _y,SDL_Surface * &screen,SDL_Surface * &_imagen){
+
     SDL_Rect origen;
-    origen.x=(0);
-    origen.y=(0);
+    origen.x=(_x);
+    origen.y=(screen->h-_y);
     origen.w=(1);
     origen.h=(1);
-    SDL_Rect destino;
-    destino.x=(_x);
-    destino.y=(screen->h-_y);
-    SDL_BlitSurface(_imagen,&origen,screen,&destino);
+    SDL_FillRect(screen, &origen, SDL_MapRGBA(screen->format,0,0,0,0));
 }
 void pintarRayitas(int cantidad,int unidad,bool isVertical,SDL_Surface * &screen,SDL_Surface * &imagen){
     for(int i=0;i<cantidad+5;i++){

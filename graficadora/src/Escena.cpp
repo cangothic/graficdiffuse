@@ -14,7 +14,6 @@ void Escena::actualizar()
 
 void Escena::eventos()
 {
-
 }
 
 void Escena::dibujar()
